@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login</title>
+<link href="css3.css" rel="stylesheet" type="text/css" >
+<link href="css1.css" rel="stylesheet" type="text/css" >
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <script>
+$(function() {
+    $( "#first" ).dialog();
+  });
+ 
+ </script>
+</head>
+
+<body>
+<div id = "first" title ="Login">
+<div>
+<form method="post" action="client.php">
+<pre>
+<p>Returning user please LOGIN</p>
+<input type = "text" name="uname" placeholder="User name"><br>
+<input type = "password" name="password" placeholder="password"><br>
+<button>Submit</button>  <button>Reset</button>
+
+        <a href="register.html">Create an new account</a>
+</pre>
+</form>
+</div>
+</div>
+<div class="dialog" title="Edit Client">
+<div id="head">
+<div class="wrapper">
+<div class="logo-cont">
+<h2 id="logo">
+<a class="ie6fix" href="first3.php">Advanced Client Portal</a>
+</h2>
+</div>
+<div class="navigation">
+<ul class="main_nav dropdown">
+<li><a href="first3.php">Home</a>
+</li>
+<li><a href="#">Actions</a>
+<ul>
+<li>
+<a class="new-client-button model" href="r4.html">New Client</a>
+</li>
+<li>
+<a class="new-project-button model" href="r4.html">New project</a>
+</li>
+<li>
+<a class="new-invoice-button model" href="project.html">New Invoice</a>
+</li>
+<li>
+<a class="new-admin-button model" href="#">New Admin</a>
+</li>
+<li>
+<a class="new-admin-button model" href="#">Edit My Info</a>
+</li>
+<li>
+<a class="change-pass-button model" href="#">Change Password</a>
+</li>
+</ul>
+</li>
+<li>
+</li>
+</ul>
+<a class="resize_button"></a>
+</div>
+</div>
+</div>
+<div id="modal" class="jqmWindow jqmID1">
+<div id="modal-body"></div>
+</div>
+<div id="content" class="clearfix">
+<div class="clear"></div>
+<div class="tmp"></div>
+<div id="alert" class>
+</div>
+
+<div id="page-content-outer">
+<div id="page-content" class="wrapper content admin">
+<div class="info-bar">
+<h1 class="title">Login</h1>
+</div>
+<div class ="innner">
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome</title>
+<link href="css3.css" rel="stylesheet" type="text/css" >
+<link href="css1.css" rel="stylesheet" type="text/css" >
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <script>
+$(function() {
+    $( "#first" ).dialog();
+  });
+  $(function() {
+    $( ".dialog" ).dialog({
+      autoOpen: false,
+  
+    });
+ 
+    $( ".opener" ).click(function() {
+      $( ".dialog" ).dialog( "open" );
+    });
+  });
+  </script>
+</head>
+<body>
+<div class="dialog" title ="Edit">
+  <form>
+<pre>
+Name<br>
+<input type="text" required><br>
+Contact Person
+<input type="text" required><br>
+Email
+<input type="text" required><br>
+Phone number
+<input type="text" required><br>
+Address
+<input type="text" required><br>
+Address2
+<input type="text"><br>
+<button>Submit</button>
+</pre>
+</form>
+</div>
+<div id="head">
+<div class="wrapper">
+<div class="logo-cont">
+<h2 id="logo">
+<a class="ie6fix" href="first3.php">Advanced Client Portal</a>
+</h2>
+</div>
+<div class="navigation">
+<ul class="main_nav dropdown">
+<li><a href="first3.php">Home</a>
+</li>
+<li><a href="#">Actions</a>
+<ul>
+<li>
+<a class="new-client-button model" href="client.html">New Client</a>
+</li>
+<li>
+<a class="new-client-button model" href="project.html">New project</a>
+</li>
+<li>
+<a class="new-client-button model" href="invoice.html">New Invoice</a>
+</li>
+<li>
+<a class="new-client-button model" href="register.html">New Admin</a>
+</li>
+<li>
+<a class="new-client-button model" href="first3.php>Edit My Info</a>
+</li>
+<li>
+<a class="new-client-button model" href="login.html">Change Password</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="index.html">Logout</a>
+</li>
+</ul>
+<a class="resize_button"></a>
+</div>
+</div>
+</div>
+<div id="modal" class="jqmWindow jqmID1">
+<div id="modal-body"></div>
+</div>
+<div id="content" class="clearfix">
+<div class="clear"></div>
+<div class="tmp"></div>
+<div id="alert" class>
+</div>
+<div id="page-content-outer">
+<div id="page-content" class="wrapper content admin">
+<div class="info-bar">
+<h1 class="title">Admin View</h1>
+<ul class="sub-tabs">
+<li class="object-action modal"><a href="index.php?a=projects/start"><span>New Project</span></a></li>  
+</ul>
+</div>
+<ul class="tab_menu wrapper">
+<li class="no-div">
+<a href="client.html"><span>Clients</span></a>
+</li>    
+<li class="selected">
+<a href="project.html"><span>Projects</span></a>
+</li>
+<li class="">
+<a href="invoice.html"><span>Invoices</span></a>
+</li>
+<li class="">
+<a href="support.html"><span>Payments</span></a>
+</li>
+<li class=" messages">
+<a href="index.php?a=messages/get/all"><span>&nbsp;</span></a>
+</li>
+</ul><div class="inner">
+
+<?php
+$n = $_POST['name'];
+$c = $_POST['contact'];
+$p = $_POST['phone'];
+$e = $_POST['email'];
+$con = mysql_connect("mysql.1freehosting.com","u594173455_local","hanuman");
+mysql_select_db("u594173455_mini", $con);
+$query = "insert into modify1(name,contact,phone,email)
+VALUES ('".$n."','".$c."','".$p."','".$e."') ";
+$s = mysql_query($query);
+if($s)
+{
+echo "Data added to database successfully go back and view the client deatils";
+}
+else
+{
+echo"Failed to connect to database";
+}
+mysql_close($con);
+
+?>
+
+<a href="first3.php">View Client Deatils</a>
+ 
+</div>                                               
+<div class="footer">
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,271 @@
+@charset "utf-8";
+/* CSS Document */
+.main_nav {
+    float: right;
+    z-index: 2000;
+    margin: 12px 0px 0px 0px;
+}
+ol, ul {
+	list-style: none;
+}
+.main_nav li {
+    float: left;
+    margin: 0 0 0 0;
+    padding: 7px 15px 10px;
+    list-style: none;
+}
+
+.main_nav a {
+    font-size: 13px;
+    color: #ccc;
+    text-decoration: none;
+    padding:12px 18px;
+	
+}
+
+.main_nav li ul li {
+    background-color: #333 ;
+    display: block;
+	
+}
+
+.dropdown li {
+    float: left;
+    position: relative;
+}
+ul.dropdown li,
+ul.dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.dropdown {
+    list-style: none;
+    position: relative;
+    z-index: 597;
+}
+
+ul.dropdown li {
+
+    float: left;
+    line-height: 1.3em;
+    vertical-align: middle;
+    zoom:1;
+    background: url(images/nav_divider.png) no-repeat center right scroll;
+}
+
+ul.dropdown > li:last-child {
+    background: none;
+}
+
+ul.dropdown li ul li {
+    background-image: none;
+}
+
+ul.dropdown li.hover,
+ul.dropdown li:hover {
+    position: relative;
+    z-index: 599;
+    cursor: default;
+}
+
+ul.dropdown ul {
+    visibility: hidden;
+    position: absolute;
+    top: 27px;
+    left: 15px;
+    z-index: 598;
+    width: 168px;
+    border-top: 1px solid #484848;
+}
+
+*ul.dropdown ul {
+    top: 22px;
+}
+
+*ul.dropdown a {
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+ul.dropdown ul li {
+
+    float: none;
+    border: 1px solid #484848;
+    border-style: none solid solid solid;
+    padding: 12px 9px;
+}
+
+ul.dropdown ul ul {
+    top: 0;
+    left: 158px;
+}
+
+ul.dropdown li:hover > ul {
+    visibility: visible;
+}
+
+.new-client-button {
+    padding: 12px 12px 12px 26px ;
+    background: transparent url(images/new_client.png) no-repeat left center scroll;
+}
+
+.new-project-button {
+    padding: 12px 12px 12px 26px ;
+    background: transparent url(images/new_project.png) no-repeat left center scroll;
+}
+
+.new-invoice-button {
+    padding: 12px 12px 12px 26px ;
+    background: transparent url(images/new_invoice.png) no-repeat left center scroll;
+}
+
+.new-admin-button {
+    padding: 12px 12px 12px 26px ;
+    background: transparent url(images/new_admin.png) no-repeat left center scroll;
+}
+
+.change-pass-button {
+    padding: 12px 12px 12px 26px ;
+    background: transparent url(images/change_password.png) no-repeat left center scroll;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1.5;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+:focus {
+	outline: 0;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html { font-size:100.01%; }
+body {
+  font-size: 75%;
+  color: #222;
+  background: #fff;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 { font-weight: normal; color: #333; }
+
+h1 { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+h2 { font-size: 2em; margin-bottom: 0.75em; }
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+h6 { font-size: 1em; font-weight: bold; }
+
+h1 img, h2 img, h3 img,
+h4 img, h5 img, h6 img {
+  margin: 0;
+}
+p           { margin: 0 0 1.5em; }
+p img.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
+
+a:focus,
+a:hover     { color: #000; }
+a           { color: #009; text-decoration: underline; }
+
+blockquote  { margin: 1.5em; color: #666; font-style: italic; }
+strong      { font-weight: bold; }
+em,dfn      { font-style: italic; }
+dfn         { font-weight: bold; }
+sup, sub    { line-height: 0; }
+
+abbr,
+acronym     { border-bottom: 1px dotted #666; }
+address     { margin: 0 0 1.5em; font-style: italic; }
+del         { color:#666; }
+
+pre         { margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+li ul,
+li ol       { margin: 0; }
+ul, ol      { margin: 0 1.5em 1.5em 0; padding-left: 3.333em; }
+
+ul          { list-style-type: disc; }
+ol          { list-style-type: decimal; }
+
+dl          { margin: 0 0 1.5em 0; }
+dl dt       { font-weight: bold; }
+dd          { margin-left: 1.5em;}
+table       { margin-bottom: 1.4em; width:100%; }
+th          { font-weight: bold; }
+thead th    { background: #c3d9ff; }
+th,td,caption { padding: 4px 10px 4px 5px; }
+tr.even  { background: #e5ecf9; }
+tfoot       { font-style: italic; }
+caption     { background: #eee; }
+.small      { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
+.large      { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
+.hide       { display: none; }
+.quiet      { color: #666; }
+.loud       { color: #000; }
+.highlight  { background:#ff0; }
+.added      { background:#060; color: #fff; }
+.removed    { background:#900; color: #fff; }
+
+.first      { margin-left:0; padding-left:0; }
+.last       { margin-right:0; padding-right:0; }
+.top        { margin-top:0; padding-top:0; }
+.bottom     { margin-bottom:0; padding-bottom:0; }
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+.clear:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+* html .clearfix,
+*:first-child+html .clearfix {
+	zoom: 1;
+}
+
